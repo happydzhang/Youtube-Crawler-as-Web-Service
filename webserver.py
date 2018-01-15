@@ -22,5 +22,5 @@ def render():
         return "No input specified"
 
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',debug=True)
 #http://localhost:5000/args?kw=nba.houston.rockets

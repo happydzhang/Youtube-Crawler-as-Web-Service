@@ -101,9 +101,9 @@ def stream_comments(dir_name, driver, shutdown):
 
             for comment in commentsToPrint:
                 localtime = time.asctime(time.localtime(time.time()))
-                print "[", localtime, "]", \
+                print ("[", localtime, "]", \
                         comment.find_element_by_id('author-name').text, \
-                        ":", comment.find_element_by_id('message').text
+                        ":", comment.find_element_by_id('message').text)
                 textfile.write("[" + localtime + "] " +\
                         comment.find_element_by_id('author-name').text.encode('utf-8') + \
                         ": " + comment.find_element_by_id('message').text.encode('utf-8') + "\n")

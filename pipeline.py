@@ -6,11 +6,11 @@ from collectData import *
 from selenium import webdriver
 
 def usage(status):
-    print "Usage: ./collectData [keyword] [n] [t]"
-    print ""
-    print "     - keyword needs to be in quotations"
-    print "     - n is the top n links in search result (< 5)"
-    print "     - t is the time out in minutes"
+    print ("Usage: ./collectData [keyword] [n] [t]")
+    print ("")
+    print ("     - keyword needs to be in quotations")
+    print ("     - n is the top n links in search result (< 5)")
+    print ("     - t is the time out in minutes")
 
     sys.exit(status)
 
