@@ -150,7 +150,7 @@ def crawl_link(url, shutdown):
 
     title = re.sub("/", "-", title)
 
-    setup_directory(title)
+    setup_directory(title.encode('utf-8').decode('utf-8') )
 
     # Collect meta_data and write them to meta_data.txt
     try:
