@@ -42,13 +42,13 @@ def collect_meta_data(dir_name, driver):
 
     # Write meta_data to a text file
     textfile = open(dir_name + "/meta_data.txt", "w")
-    textfile.write("Owner:          " + owner.encode('utf-8') + "\n")
-    textfile.write("Title:          " + title.encode('utf-8') + "\n")
-    textfile.write("Viewers:        " + viewers.encode('utf-8') + "\n")
-    textfile.write("Likes:          " + likes.encode('utf-8') + "\n")
-    textfile.write("Dislikes:       " + dislikes.encode('utf-8') + "\n")
+    textfile.write("Owner:          " + owner.encode('utf-8').decode('utf-8') + "\n")
+    textfile.write("Title:          " + title.encode('utf-8').decode('utf-8')  + "\n")
+    textfile.write("Viewers:        " + viewers.encode('utf-8').decode('utf-8')  + "\n")
+    textfile.write("Likes:          " + likes.encode('utf-8').decode('utf-8')  + "\n")
+    textfile.write("Dislikes:       " + dislikes.encode('utf-8').decode('utf-8')  + "\n")
     textfile.write("Description:    " + "\n")
-    textfile.write(description.encode('utf-8') + "\n")
+    textfile.write(description.encode('utf-8').decode('utf-8')  + "\n")
 
 
 """
@@ -105,8 +105,8 @@ def stream_comments(dir_name, driver, shutdown):
                         comment.find_element_by_id('author-name').text, \
                         ":", comment.find_element_by_id('message').text)
                 textfile.write("[" + localtime + "] " +\
-                        comment.find_element_by_id('author-name').text.encode('utf-8') + \
-                        ": " + comment.find_element_by_id('message').text.encode('utf-8') + "\n")
+                        comment.find_element_by_id('author-name').text.encode('utf-8').decode('utf-8')  + \
+                        ": " + comment.find_element_by_id('message').text.encode('utf-8').decode('utf-8')  + "\n")
 
             currentStyle = driver.find_element_by_id('item-offset').get_attribute('style')
             currentSize = len(comments)
