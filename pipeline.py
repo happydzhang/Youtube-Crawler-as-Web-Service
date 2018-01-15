@@ -75,7 +75,7 @@ def pipeline_run(links):
     # Start threads to crawl data
     for link in links:
         print("Starting thread for link: " + link.decode('utf-8'))
-        t = threading.Thread(target = crawl_link, args=(link, lambda: shutdown,))
+        t = threading.Thread(target = crawl_link, args=(link.decode('utf-8'), lambda: shutdown,))
         threads.append(t)
         t.start()
 
