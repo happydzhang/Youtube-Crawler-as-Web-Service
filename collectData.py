@@ -134,8 +134,8 @@ def crawl_link(url, shutdown):
     driver_path = os.getcwd()
 
     # Start an instance of browser
-    #driver1 = webdriver.Chrome(chrome_options=options)
-    driver1  = webdriver.Chrome(driver_path+"/chromedriver",chrome_options=options)
+    driver1 = webdriver.Chrome(chrome_options=options)
+    #driver1  = webdriver.Chrome(driver_path+"/chromedriver",chrome_options=options)
     driver1.get(url)
 
     # Make sure everything is loaded before beginning

@@ -27,7 +27,8 @@ def get_links(keyword, number,driver_path):
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
 
-    driver = webdriver.Chrome(driver_path+"/chromedriver",chrome_options=options)
+   # driver = webdriver.Chrome(driver_path+"/chromedriver",chrome_options=options)
+    driver = webdriver.Chrome(chrome_options=options)    
     driver.get(url)
 
     videos = driver.find_elements_by_tag_name('ytd-video-renderer')
