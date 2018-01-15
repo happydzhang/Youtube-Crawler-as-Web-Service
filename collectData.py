@@ -18,9 +18,10 @@ from selenium.common.exceptions import NoSuchElementException
 """
 def setup_directory(name):
     try:
-        os.mkdir(name)
+        os.mkdir("test")
         os.mkdir(name + "/screenshots")
     except OSError:
+        print ("here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         pass
 
     return
