@@ -18,8 +18,8 @@ from selenium.common.exceptions import NoSuchElementException
 """
 def setup_directory(name):
     try:
-        os.mkdir(name.encode('utf-8').decode('utf-8') )
-        os.mkdir(name.encode('utf-8').decode('utf-8')  + "/screenshots")
+        os.mkdir(name.encode('utf-8'))
+        os.mkdir(name.encode('utf-8')  + "/screenshots")
     except OSError:
         pass
 
